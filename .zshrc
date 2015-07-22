@@ -30,7 +30,7 @@ ZSH_THEME="robbyrussell"
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -50,6 +50,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins=(sudo)
 
 # User configuration
 
@@ -91,25 +92,11 @@ function mkd() {
     cd "$@"
 }
 
-#cd and ls at the same time
-function gg() {
-    cd "$@"
-    ls
-}
-
 #quicklook from terminal
 function ql() {
     qlmanage -p "$*" >& /dev/null; 
 }
 
-#create file and then open it in vim
-function touchv() {
-    touch "$@"
-    chmod 777 "$@"
-    vim "$@"
-}
-
-alias all='ls -a'
 alias ~='cd ~' #home directory shortcut
 alias f='open -a Finder ./' #open Finder in current directory
 alias gi='open http://www.github.com'
@@ -119,8 +106,7 @@ alias ...='cd ../../' #go back 2 directory levels
 alias .3='cd ../../../' #go back 3 directory levels
 alias .4='cd ../../../../' #go back 4 directory levels
 alias .5='cd ../../../../../' #go back 5 directory levels
-alias reload='source ~/.bash_profile' #reload bash_profile
-alias e-alias='vim ~/.aliases.sh' #edit aliases shortcut
+alias reload='source ~/.dotfiles/.zshrc' #reload zsh_profile
 alias qf='find . -name' #quickly search for file
 alias chr="open -a /Applications/'Google Chrome.app'"
 alias sleep='pmset sleepnow'
@@ -131,14 +117,6 @@ killall Finder /System/Library/CoreServices/Finder.app'
 #Permissions
 
 #**********************************************#
-
-#User defined vim aliases and functions
-
-#pathogen install shortcut
-function vbundle() {
-    cd ~/.vim/bundle
-    git clone "$@"
-}
 
 #edit vimrc shortcut
 alias vimrc="vim ~/.dotfiles/.vimrc"
