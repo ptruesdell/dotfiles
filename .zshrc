@@ -24,7 +24,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+#DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -58,7 +58,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -99,8 +98,6 @@ function ql() {
 
 alias ~='cd ~' #home directory shortcut
 alias f='open -a Finder ./' #open Finder in current directory
-alias gi='open http://www.github.com'
-alias c='clear' #clear shortcut
 alias ..='cd ..' #go back one directory level
 alias ...='cd ../../' #go back 2 directory levels
 alias .3='cd ../../../' #go back 3 directory levels
@@ -108,7 +105,6 @@ alias .4='cd ../../../../' #go back 4 directory levels
 alias .5='cd ../../../../../' #go back 5 directory levels
 alias reload='source ~/.dotfiles/.zshrc' #reload zsh_profile
 alias qf='find . -name' #quickly search for file
-alias chr="open -a /Applications/'Google Chrome.app'"
 alias sleep='pmset sleepnow'
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES;
     killall Finder /System/Library/CoreServices/Finder.app'

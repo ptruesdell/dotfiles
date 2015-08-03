@@ -2,7 +2,7 @@
 " Last Change:  June 29, 2015
 " p> 
 "
-"execute pathogen#infect()
+execute pathogen#infect()
 
 set nocompatible
 set hidden
